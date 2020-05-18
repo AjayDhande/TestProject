@@ -1,0 +1,15 @@
+
+en:
+  application:
+    home_page: "Home Page"
+    game_page: "Game Page"
+  validation_messages:
+    image_size: Image size should be less than 500 kb
+    image_format: Uploaded file is not an image.
+  success_messages:
+    image_saved: Image saved successfully.
+  hello: "Hello world"
+  timer: "Timer"
+  play: "Play Game"
+  images: "Images"
+  timer_value: "Timer Value"

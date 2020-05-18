@@ -1,0 +1,4 @@
+<%= form_for @image, url: home_upload_image_path do |form| %>
+  <%= form.file_field :image_file, multiple: true, required: true %>
+  <%= form.submit %>
+<% end %>

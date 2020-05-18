@@ -1,0 +1,20 @@
+<%= javascript_tag do %>
+  var images = <%= @images.to_json.html_safe %>;
+<% end %>
+<h1><%= t('timer') %>: <span id="game-timer"></span></h1>
+<img id="image" src="" width="200" height="150">
+<br>
+<button onclick="saveImageInfo()"><%= t('play') %></button>
+<br><br>
+<table id="play-table">
+  <tr>
+    <th><%= t('images') %></th>
+    <th><%= t('timer_value') %></th>    
+  </tr>
+  <% @rounds.each do |round| %>
+    <tr>
+      <td><%=image_tag(round.url, width: 200, height: 150) %></td>    
+      <td><h1><%= round.counter %></h1></td>
+    </tr>
+  <%end%>
+</table>

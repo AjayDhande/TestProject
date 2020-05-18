@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+      <% flash.each do |msg| %>
+          <%= msg[1] %>
+      <% end %><br>
+      <%= link_to  I18n.t('application.home_page'), root_path, method: :get %>
+      <%= link_to  I18n.t('application.game_page'), home_game_path, method: :get %>
+    </div><br>
+    <%= yield %>
+  </body>
+</html>
